@@ -6,11 +6,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_acitvity_sensor">Sensors</string>
-    <string name="title_activity_save">Persistente Speicherung</string>
-    <string name="title_activity_gallery">Gallery</string>
-    <string name="title_activity_contact__date">activityContact_Date</string>
-    <string name="title_activity_web_view">WebView</string>
-    <string name="title_activity_sensor_detail">activitySensorDetail</string>
-    <string name="title_activity_sensor">activitySensor</string>
+    <string name="title_activity_sensor">SensorActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_contacts">contactsActivity</string>
 </resources>

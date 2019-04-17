@@ -1,10 +1,7 @@
-package com.example.marco.pvl;
+package com.example.pvl;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,12 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.marco.pvl.activities.activityContact_Date;
-import com.example.marco.pvl.activities.activityGallery;
-import com.example.marco.pvl.activities.activitySave;
-import com.example.marco.pvl.activities.activitySensor;
-import com.example.marco.pvl.activities.activityWebView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,15 +20,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -86,25 +68,19 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        Intent i;
-
-        if (id == R.id.nav_camera) {
-           i = new Intent(this, activitySensor.class);
-           startActivity(i);
+        Intent i = new Intent();
+        if (id == R.id.nav_sensors) {
+            i = new Intent(this, SensorActivity.class);
         } else if (id == R.id.nav_save) {
-            i = new Intent(this, activitySave.class);
-            startActivity(i);
-        } else if (id == R.id.nav_gallery) {
-            i = new Intent(this, activityGallery.class);
-            startActivity(i);
-        } else if (id == R.id.nav_contacts) {
-            i = new Intent(this, activityContact_Date.class);
-            startActivity(i);
-        } else if (id == R.id.nav_webView) {
-            i = new Intent(this, activityWebView.class);
-            startActivity(i);
+            i = new Intent(this, SaveActivity.class);
+        } else if (id == R.id.nav_picture) {
+            i= new Intent(this, DialogActivity.class);
+        } else if (id == R.id.nav_contact) {
+            i = new Intent(this, ContactsActivity.class);
+        } else if (id == R.id.nav_webview) {
+            i = new Intent(this, WebActivity.class);
         }
+        startActivity(i);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

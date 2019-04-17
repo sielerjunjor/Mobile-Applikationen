@@ -1,4 +1,4 @@
-package com.example.marco.pvl;
+package com.example.pvl;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.marco.pvl", appContext.getPackageName());
+        assertEquals("com.example.pvl", appContext.getPackageName());
     }
 }

@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.activityWebView"
-    tools:showIn="@layout/activity_web_view">
+    android:layout_height="match_parent">
+    <!--tools:context=".ContactsActivity"
+    tools:showIn="@layout/sensor_layout"-->
 
+    <ListView
+        android:id="@+id/list_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
 </android.support.constraint.ConstraintLayout>

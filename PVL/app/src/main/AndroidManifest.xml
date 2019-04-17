@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.marco.pvl">
+    package="com.example.pvl">
+
+    <uses-permission
+        android:name="android.permission.READ_CONTACTS"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,29 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.activitySave"
-            android:label="@string/title_activity_save"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.activityGallery"
-            android:label="@string/title_activity_gallery"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.activityContact_Date"
-            android:label="@string/title_activity_contact__date"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.activityWebView"
-            android:label="@string/title_activity_web_view"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.activitySensor"
+            android:name=".SensorActivity"
             android:label="@string/title_activity_sensor"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SaveActivity" />
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".SingleSensorActivity"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
 
 </manifest>
